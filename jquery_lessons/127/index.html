@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sample</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+<h1>要素にイベントを送信</h1>
+<img src="images/photo1.jpg" id="photo1" width="160" height="120" alt="">
+<form>
+  <input type="button" id="sendEvent" value="clickイベントを送信">
+</form>
+<output></output>
+
+
+<script>
+$(function() {
+  $("#photo1").click(function() {
+    $(this).fadeTo(250)
+  });
+});
+
+
+</script>
+    
+</body>
+</html>

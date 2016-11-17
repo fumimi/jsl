@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sample</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+    <h1>最後のテキストフィールドを選択する</h1>
+    <form>
+      <input type="text" value="iPhone"><br>
+      <input type="text" value="iPad"><br>
+      <input type="text" value="Nexus"><br>
+      <input type="text" value="Nexus 7"><br>
+      <input type="text" value="Galaxy Nexus"><br>
+      <input type="text" value="Kindle"><br>
+      <input type="text" value="Kindle Fire HD"><br>
+      <input type="button" value="最後のテキストフィールドの背景色を変更">
+    </form>
+
+
+<script>
+$(function() {
+  $(":button").click(function() {
+    $("input[type=text]:last").css("background", "orange");
+  });
+});
+
+
+</script>
+    
+</body>
+</html>

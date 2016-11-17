@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sample</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+<h1>1回だけ処理を行う</h1>
+<div><img src="images/photo1.jpg" id="photo1" width="160" height="120" alt=""></div>
+<output></output>
+
+
+<script>
+$(function() {
+  $("#photo1").one("click", function() {
+    $(this).fadeTo(100, 0.5);
+    var dateObj = new Date();
+    var h = dateObj.getHours();
+    var m = dateObj.getMinutes();
+    var s = dateObj.getSeconds();
+    $("output:first").text(h + "時" + m + "分" + s + "秒にクリックしました。")
+  });
+});
+
+</script>
+    
+</body>
+</html>
