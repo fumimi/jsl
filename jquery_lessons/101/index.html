@@ -6,16 +6,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
-<h1>要素の後に追加</h1>
-<form>
-  <input type="button" value="追加">
-</form>
-<div><span id="pi">円周率は</span></div>
+  <h1>要素の前に挿入</h1>
+  <form>
+    <input type="button" value="挿入">
+  </form>
+  <div><span id="pi">3.1415926535897932384</span></div>
 
 <script>
 $(function() {
   $(":button").click(function() {
-    $("#pi").append(Math.PI, "<span>です。</span>");
+    $("#pi").before("円周率は");
   });
 });
 
