@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sample</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+      h1 {
+          margin: 7px; 
+          padding: 5px; 
+          border:10px solid red;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>要素の内側／外側の幅を取得する</h1>
+    <form>
+      <input type="button" value="h1要素の内側の幅を取得">
+      <input type="button" value="h1要素の外側の幅を取得">
+      <input type="button" value="h1要素の枠を含めた幅を取得">
+    </form>
+
+<script>
+$(function() {
+  $(":button:eq(0)").click(function() {
+    var w = $("h1").innerWidth();
+    var h = $("h1").innerHeight();
+    alert("内側の横幅：" + w + "、縦幅：" + h);
+  });
+  $(":button:eq(1)").click(function() {
+    var w = $("h1").outerWidth();
+    var h = $("h1").outerHeight();
+    alert("外側の横幅：" + w + "、縦幅：" + h);
+  });
+  $(":button:eq(2)").click(function() {
+    var w = $("h1").outerWidth(true);
+    var h = $("h1").outerHeight(true);
+    alert("枠を含む外側の横幅：" + w + "、縦幅：" + h);
+  });
+});
+
+</script>
+
+</body>
+</html>

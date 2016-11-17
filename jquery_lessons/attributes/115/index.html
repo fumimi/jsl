@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sample</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+      .caution { border-bottom: 2px solid red; }
+    </style>
+
+</head>
+<body>
+    <h1 id="myHeader">要素にクラスがあるか調べる</h1>
+    <form>
+      <input type="button" id="checkClass" value="cautionクラスがあるか確認">
+      <input type="button" id="addClass" value="cautionクラスを追加">
+    </form>
+
+<script>
+$(function() {
+  $("#checkClass").click(function() {
+    alert( $("h1").hasClass("caution") );
+  });
+  $("#addClass").click(function() {
+    $("h1").addClass("caution");
+  });
+});
+
+</script>
+
+</body>
+</html>

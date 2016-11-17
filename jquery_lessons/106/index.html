@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sample</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+    <h1>要素内のテキストの読み込みと書き出し</h1>
+    <form>
+      <input type="button" value="乱数値を追加">
+    </form>
+    <output></output>
+
+<script>
+$(function() {
+  $(":button").click(function() {
+    var content = $("output:first").text();
+    content = content + Math.random() + ", ";
+    $("output:first").text(content);
+  });
+});
+
+</script>
+
+</body>
+</html>

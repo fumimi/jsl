@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sample</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+      h1 { border:1px solid red; }
+    </style>
+
+</head>
+<body>
+    <h1>親要素からの相対位置を取得する</h1>
+    <form>
+      <input type="button" id="btn" value="h1要素の相対位置を取得">
+    </form>
+
+<script>
+$(function() {
+  $("#btn").click(function() {
+    var coords = $("h1").position();
+    var x = coords.left;
+    var y = coords.top;
+    alert("X：" + x + "Y：" + y);
+  })
+});
+
+</script>
+
+</body>
+</html>
