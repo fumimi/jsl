@@ -1,2 +1,34 @@
-index.html
-index.html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sample</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+  .note { border: 1px solid red; width: 200px; }
+</style>
+</head>
+<body>
+<h1>要素を置き換える</h1>
+<form>
+  <input type="button" value="置き換える">
+</form>
+<ol id="damList">
+  <li>高遠ダム</li>
+  <li>美和ダム</li>
+  <li class="note">味噌川ダム</li>
+  <li class="note">奈良井ダム</li>
+  <li>東條ダム</li>
+</ol>
+
+<script>
+$(function() {
+   $(":button:eq(0)").click(function() {
+       $("#damList .note").replaceWith("<li>※撮影済み</li>");
+   });
+});
+
+</script>
+    
+</body>
+</html>
