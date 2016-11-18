@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sample</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+<body>
+    <h1>画像のイベントを解除する</h1>
+    <div>
+      <img src="/images/p001.jpg" width="120" height="" alt="室蘭白鳥大橋">
+    </div>
+    <form>
+      <input type="button" id="one" value="clickイベントのみ解除">
+      <input type="button" id="all" value="全てのイベントを解除">
+    </form>
+    <output></output>
+
+<script>
+$(function() {
+  
+});
+
+$(function(){
+  // 画像にclickイベントを設定する
+  $("img").bind("click", function(){
+    // イベントが発生した事を示す文字を表示
+    $("output:first").text("clickイベント発生");
+  });
+  // 画像にmouseoverイベントを設定する
+  $("img").bind("mouseover", function(){
+    // イベントが発生した事を示す文字を表示
+    $("output:first").text("mouseoverイベント発生");
+  });
+  // 画像にmouseoutイベントを設定する
+  $("img").bind("mouseout", function(){
+    // イベントが発生した事を示す文字を表示
+    $("output:first").text("mouseoutイベント発生");
+  });
+  // clickイベント解除ボタンの処理
+  $("#one").click(function(){
+    // clickイベントのみ解除
+    $("img").unbind("click");
+    // clickイベントを解除した事を示す文字を表示
+    $("output:first").text("clickイベントを解除しました");
+  });
+  // 全てのイベント解除ボタンの処理
+  $("#all").click(function(){
+    // 全イベントを解除
+    $("img").unbind();
+    // 全イベントを解除した事を示す文字を表示
+    $("output:first").text("全てのイベントを解除しました");
+  });
+});
+</script>
+
+</body>
+</html>
