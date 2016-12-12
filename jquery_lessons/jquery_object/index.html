@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sample</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+<h1>jQuery オブジェクト</h1>
+
+jQuery === $
+
+オブジェクトでもあり、関数でもある。
+オブジェクトはそれ自身がデータを保持するもの
+→複数の箇所から異なる値をセットしようとすれば不整合が発生する
+
+そこで、オリジナルのオブジェクトには手を加えずにコピーを操作することでデータの競合を防ぐことができる。
+
+
+jQueryと$はともにObjectのインスタンス
+
+jQuery instanceof Object
+
+$ instanceof Object
+
+(function(){}) instanceof Object
+
+new Function() instanceof Object
+
+<h2>windowオブジェクトのプロパティとして組み込まれている</h2>
+
+'jQuery' in window
+
+'$' in window
+
+<h2>$が使えないときの対処法</h2>
+
+・prototype.jsなどの他のライブラリで$を使っている場合
+・異なるバージョンのjQueryを共存する
+
+$j21 = jQuery.noConflict(true);
+
+<h2>$を記述できる範囲を限定する</h2>
+
+方法：<br>
+関数のの仮引数に$を設定しておき、実引数にjQueryオブジェクトを設定する。
+関数の定義には以下の2種類があります。
+
+・(function($){})(jQuery);
+→function($){}で定義した関数に引数うjQueryを設定してすぐに実行することを表す
+
+・jQuery(function($){});
+WebブラウザがHTMLを読み込んだあとにfunction($){}が実行される
+
+<h2>関数として実行されるときの動作</h2>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+console.log('jQuery' in window);
+</script>
+
+</body>
+</html>
