@@ -7,19 +7,20 @@
 </head>
 <body>
 
-
 <div>
-  <h4>jquery</h4>
-
+  <h4 id="head-1">jquery</h4>
+  <h4 id="head-2">jquery UI</h4>
 </div>
 
-
-
-
-
 <script>
+$("h4").toArray();
 
-console.log('jQuery' in window);
+$("h4").toArray() instanceof Array;
+document.getElementsByTagName("h4") instanceof Array;
+
+$("h4").get();
+$("h4").get(0).id
+
 </script>
 
 </body>
