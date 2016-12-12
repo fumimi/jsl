@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>制御構文</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+
+構造化プログラミング　→　プルグラムの構造は大きく3つに分類される
+
+・順次　→　記述された順番に処理を行っていく
+・選択　→　条件によって処理を分岐する
+・反復　→　特定の処理を繰り返し実行する
+
+条件によって処理を分岐する
+
+・if
+・switch
+
+<script>
+// var x = 7;
+// if(x >= 10) {
+//   console.log("変数xは10以上です。")
+// } else {
+//   console.log("変数xは10未満です。")
+// }
+
+// var x = 9;
+// if(x >= 20){
+//   console.log("変数xは20以上です。");
+// } else if(x >= 10) {
+//   console.log("変数xは10以上です。");
+// } else{
+//   console.log("変数xは10未満です。");
+// }
+
+// if命令の入れ子構造
+// var x = 12;
+// if(x >= 10) {
+//   console.log("変数xは10以上です。");
+//   if(x >=20) {
+//     console.log("変数xは20以上です。");
+//   } else {
+//     console.log("変数xは10以上20未満です。");
+//   }
+// }
+
+// 式の値によって処理を分岐する
+// var rank = "c";
+// if(rank === "A"){
+//   console.log("Aランクです。");
+// } else if(rank === "B") {
+//   console.log("Bランクです。");
+// } else if(rank === "C") {
+//   console.log("Cランクです。");
+// } else {
+//   console.log("ランク外です。");
+// }
+
+// 上記をifからswitchに書き換える
+var rank = "B"
+switch(rank){
+  case "A":
+    console.log("Aランクです。");
+    break;
+  case "B":
+    console.log("Bランクです。");
+    break;
+  case "C":
+    console.log("Cランクです。");
+    break;
+  default:
+    console.log("ランク外です。");
+    break;
+}
+
+
+</script>
+
+</body>
+</html>
