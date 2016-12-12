@@ -7,16 +7,50 @@
 </head>
 <body>
 
-構造化プログラミング　→　プルグラムの構造は大きく3つに分類される
+<p>構造化プログラミング　→　プルグラムの構造は大きく3つに分類される</p>
 
-・順次　→　記述された順番に処理を行っていく
-・選択　→　条件によって処理を分岐する
-・反復　→　特定の処理を繰り返し実行する
+<ul>
+  <li>順次　→　記述された順番に処理を行っていく</li>
+  <li>選択　→　条件によって処理を分岐する</li>
+  <li>反復　→　特定の処理を繰り返し実行する</li>
+</ul>
 
-条件によって処理を分岐する
+<p>条件によって処理を分岐する</p>
 
-・if
-・switch
+<ul>
+  <li>if</li>
+  <li>switch</li>
+</ul>
+
+繰り返し処理/反復処理
+
+<ul>
+  <li>for</li>
+  <li>for ... in</li>
+  <li>for ... of</li>
+  <li>while</li>
+  <li>do ... while</li>
+</ul>
+
+<p>whileとdo ... whileの違い</p>
+
+<ul>
+  <li>while　→　ループの最初で条件式を判定する（前置判定）</li>
+  <li>do ... while　→　ループの最後で条件式を判定する（後置判定）</li>
+</ul>
+
+<p>無限ループ</p>
+
+必ず脱出する方法を作る
+
+<p>指定回数だけループを処理する for文</p>
+
+<p>連想配列の要素を順に処理する for ... in文</p>
+
+
+
+
+
 
 <script>
 // var x = 7;
@@ -59,21 +93,40 @@
 // }
 
 // 上記をifからswitchに書き換える
-var rank = "B"
-switch(rank){
-  case "A":
-    console.log("Aランクです。");
-    break;
-  case "B":
-    console.log("Bランクです。");
-    break;
-  case "C":
-    console.log("Cランクです。");
-    break;
-  default:
-    console.log("ランク外です。");
-    break;
-}
+// var rank = "B"
+// switch(rank){
+//   case "A":
+//     console.log("Aランクです。");
+//     break;
+//   case "B":
+//     console.log("Bランクです。");
+//     break;
+//   case "C":
+//     console.log("Cランクです。");
+//     break;
+//   default:
+//     console.log("ランク外です。");
+//     break;
+// }
+
+// while.js
+// var x = 10;
+// while(x < 10){
+//   console.log("xの値は" + x);
+//   x++;
+// }
+// do_while.js
+// do{
+//   console.log("xの値は" + x);
+//   x++;
+// }while(x < 10)
+
+// for(var x = 6; x < 10; x+=2){
+//   console.log("xの値は" + x);
+// }
+
+
+
 
 
 </script>
