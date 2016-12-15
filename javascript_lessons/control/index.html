@@ -125,7 +125,22 @@
 //   console.log("xの値は" + x);
 // }
 
+// var data = {apple: 150, orange: 100, banana: 120}
+// for (var key in data){
+//   console.log(key + "=" + data[key]);
+// }
 
+// var data = ["apple", "orange", "banana"];
+// for (var key in data){
+//   console.log(data[key])
+// }
+
+var data = ["apple", "orange", "banana"];
+
+Array.prototype.hoge = function(){}
+for (var key in data){
+  console.log(data[key]);
+}
 
 
 
