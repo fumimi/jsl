@@ -22,18 +22,29 @@
 
 // ＊実際に与えられた引数の数と要求する引数の数を比較し、異なる場合にエラーを返す
 
-function showMessage(value){
-  if(arguments.lnegth !== 1){
-    throw new Error("引数の数が間違っています：" + arguments.length);
-  }
-  console.log(value);
+// function showMessage(value){
+//   if(arguments.lnegth !== 1){
+//     throw new Error("引数の数が間違っています：" + arguments.length);
+//   }
+//   console.log(value);
+// }
+//
+// try {
+//   showMessage("山田", "鈴木");
+// } catch(e) {
+//   window.alert(e.message);
+// }
+
+
+// 引数のデフォルト値を設定する
+
+function getTriangle(base, height){
+  if(base === undefined){ base = 1; }
+  if(height === undefined){ height = 1; }
+  return base * height / 2;
 }
 
-try {
-  showMessage("山田", "鈴木");
-} catch(e) {
-  window.alert(e.message);
-}
+console.log(getTriangle(5));
 
 
 </script>
