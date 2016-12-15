@@ -26,6 +26,8 @@ var命令を使わずに宣言された変数はすべてグローバル変数�
 ローカル変数の有効範囲は関数ないでローカル変数が宣言された後から
 ローカル変数は関数の先頭で宣言する
 
+＊仮引数のスコープ
+基本型と参照型の違い
 
 
 <script type="text/javascript">
@@ -51,16 +53,38 @@ var命令を使わずに宣言された変数はすべてグローバル変数�
 // console.log(scope);
 
 
-var scope = "Global Variable";
+// var scope = "Global Variable";
+//
+// function getValue(){
+//   console.log(scope);
+//   var scope = "Local Variable";
+//   return scope;
+// }
+//
+// console.log(getValue());
+// console.log(scope);
 
-function getValue(){
-  console.log(scope);
-  var scope = "Local Variable";
-  return scope;
+// var value = 10;
+//
+// function decrementValue(value){
+//   value--;
+//   return value;
+// }
+//
+// console.log(decrementValue(100));
+// console.log(value);
+
+
+var value = [1, 2, 4, 8, 16]
+function deleteElement(value){
+  value.pop();
+  return value;
 }
 
-console.log(getValue());
-console.log(scope);
+console.log(deleteElement(value));
+console.log(value);
+
+
 
 
 </script>
