@@ -23,6 +23,10 @@ var命令を使わずに宣言された変数はすべてグローバル変数�
 
 ＊ローカル変数の有効範囲はどこまでか
 
+ローカル変数の有効範囲は関数ないでローカル変数が宣言された後から
+ローカル変数は関数の先頭で宣言する
+
+
 
 <script type="text/javascript">
 // var scope = "Global Variable";
@@ -36,16 +40,27 @@ var命令を使わずに宣言された変数はすべてグローバル変数�
 // console.log(scope);
 
 
-scope = "Global Variable";
+// scope = "Global Variable";
+//
+// function getValue(){
+//   scope = "Loval Variable";
+//   return scope;
+// }
+//
+// console.log(getValue());
+// console.log(scope);
+
+
+var scope = "Global Variable";
 
 function getValue(){
-  scope = "Loval Variable";
+  console.log(scope);
+  var scope = "Local Variable";
   return scope;
 }
 
 console.log(getValue());
 console.log(scope);
-
 
 
 </script>
