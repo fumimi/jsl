@@ -16,16 +16,37 @@
 グローバル変数　→　関数の外で宣言した変数
 ローカル変数　→　関数の中で宣言した変数
 
+＊変数宣言にvarが必須な理由
+
+var命令を使わずに宣言された変数はすべてグローバル変数と見なす
+ローカル変数を定義するには、必ずvar命令を使用する
+
+＊ローカル変数の有効範囲はどこまでか
+
+
 <script type="text/javascript">
-var scope = "Global Variable";
+// var scope = "Global Variable";
+//
+// function getValue(){
+//   var scope = "Loval Variable";
+//   return scope;
+// }
+//
+// console.log(getValue());
+// console.log(scope);
+
+
+scope = "Global Variable";
 
 function getValue(){
-  var scope = "Loval Variable";
+  scope = "Loval Variable";
   return scope;
 }
 
 console.log(getValue());
 console.log(scope);
+
+
 
 </script>
 </body>
