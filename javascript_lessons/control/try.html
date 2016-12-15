@@ -7,17 +7,26 @@
 </head>
 <body>
 <script>
-var i = 1;
+// var i = 1;
+//
+// try{
+//   i = i * j;
+// } catch(e) {
+//   console.log(e.message);
+// } finally {
+//   console.log("処理は完了しました。");
+// }
 
-try{
-  i = i * j;
+// throw命令　例外をスローする
+
+var x = 1;
+var y = 0;
+try {
+  if(y === 0){ throw new Error("0で除算しようとしました。"); }
+  var z = x / y;
 } catch(e) {
   console.log(e.message);
-} finally {
-  console.log("処理は完了しました。");
 }
-
-
 
 
 </script>
