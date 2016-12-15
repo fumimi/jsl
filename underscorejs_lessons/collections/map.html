@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mapメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+第1引数「配列（Object）」の各値に第2引数で指定した関数を適用し、結果を配列にして返す。
+
+第1引数「配列（Object）」
+第2引数で指定した関数
+
+<script>
+var array = [1, 2, 3];
+var func = function(val){
+  return val * 3;
+}
+var re = _.map(array, func);
+console.log(re);
+
+</script>
+</body>
+</html>
