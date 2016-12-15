@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>スコープ</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+
+スコープ
+変数がスクリプトの中のどの場所から参照できるかということ
+
+グローバルスコープ　→　スクリプト全体から参照できる
+ローカルスコープ　→　定義された関数の中でのみ参照できる
+
+グローバル変数　→　関数の外で宣言した変数
+ローカル変数　→　関数の中で宣言した変数
+
+<script type="text/javascript">
+var scope = "Global Variable";
+
+function getValue(){
+  var scope = "Loval Variable";
+  return scope;
+}
+
+console.log(getValue());
+console.log(scope);
+
+</script>
+</body>
+</html>
