@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Collection</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+  <h1>Collection</h1>
+  <h2>.each()</h2>
+  <ul id="each"></ul>
+  <h2>.map()</h2>
+  <ul id="map"></ul>
+  <h2>.reduce()</h2>
+  <ul id="reduce"></ul>
+
+<script>
+function doEach(){
+  var source = ["太郎", "次郎", "三郎"];
+  var func = function(x){
+    $("#each").append($("<li>").text(x));
+  }
+  _.each(source, func)
+}
+doEach();
+
+function doMap(){
+  var source = ["太郎", "次郎", "三郎"];
+  var func = function(x){
+    return "Hello " + x + "!";
+  }
+  var results = _.map(source, func);
+  for (var key in results){
+    $("#map").append( $("<li>").text(results[key]) );
+  }
+}
+doMap();
+
+function doReduce(){
+  var source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  var func = function(x, y){
+    return x + y;
+  }
+  var sum = _.reduce(source, func, 0);
+  $("#reduce").text(sum);
+}
+doReduce();
+
+
+
+</script>
+</body>
+</html>
