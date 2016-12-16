@@ -12,7 +12,7 @@ var Task = Backbone.Model.extend({
         if ( _.isEmpty(attrs.title) ) {
             return "title must not be empty!";
         }
-    },    
+    },
     // 独自のメソッドを追加することもできるこの場合completedをtureからfalseに変更する関数
     toggle: function() {
         this.set('completed', !this.get('completed'));
@@ -34,5 +34,22 @@ task1.set({title: ''}, {validate: true});
 // task1.toggle();
 console.log(task1.toJSON());
 
-})();
 
+var Workspace = Backbone.Router.extend({
+
+  routes: {
+    "help":                 "help",    // #help
+    "search/:query":        "search",  // #search/kiwis
+    "search/:query/p:page": "search"   // #search/kiwis/p7
+  },
+
+  help: function() {
+  },
+
+  search: function(query, page) {
+  }
+
+});
+
+
+})();
