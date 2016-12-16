@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>allKeysメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+引数のkey値（プロトタイプを含む）をまとめた配列を返す。
+
+<script>
+function DQ( name ){
+  this.music = "";
+  this.author = name;
+}
+DQ.prototype.famicon = true;
+
+var re = _.allKeys( new DQ("てくてく"));
+console.log(re);
+
+</script>
+</body>
+</html>
