@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>rejectメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+第1引数「配列」の値の中で
+第2引数の関数の条件を満たしていない値のみの
+配列を返す。
+
+<script>
+var array = [1, 2, 3, 4, 5, 6];
+var func = function( num ){
+	return num % 2 == 0;
+}
+
+var re = _.reject( array, func );
+console.log(re);
+
+</script>
+</body>
+</html>
