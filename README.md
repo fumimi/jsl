@@ -1,6 +1,6 @@
-jsl
+#jsl
 
-・backbonejs
-・underscorejs
-・jquery
-・javascript
+- backbonejs
+- underscorejs
+- jquery
+- javascript
