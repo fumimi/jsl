@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>attrメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+  <em title="attrメソッド"></em>
+  <img id="greatphoto" src="https://brand.jquery.org/resources/jquery-mark-dark.gif" alt="javascript">
+
+
+<script>
+// 指定した属性の値を取得します。
+// var title = $("em").attr("title");
+// console.log(title);
+
+// 指定した属性にvalueの値を設定します。
+// $("#greatphoto").attr("alt", "jQuery logo");
+
+// 各属性にmap値を用いてまとめて値を設定します。
+// $("#greatphoto").attr({
+//   alt: "jQuery logo alt",
+//   title : "jQuery logo title"
+// });
+
+// 指定した属性に関数の戻り値を設定します。
+$("#greatphoto").ar("title", function(i, val){
+  var i = 10;
+  var val = "jQuery attr method"
+  if(i == 10){
+    return val;
+  }
+});
+
+</script>
+</body>
+</html>
