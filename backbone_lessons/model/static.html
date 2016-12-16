@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>staticメンバーを定義する - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>staticメンバーを定義する</h1>
+
+<script>
+var MyModel = Backbone.Model.extend({}, {
+    staticField: 'static field',
+
+    staticMethod: function() {
+        console.log('static method');
+    }
+});
+
+console.log(MyModel.staticField);
+MyModel.staticMethod();
+
+</script>
+</body>
+</html>
