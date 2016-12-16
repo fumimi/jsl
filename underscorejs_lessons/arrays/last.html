@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>lastメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+第1引数「配列」を index = 0 から
+第2引数の数まで指定された数だけ前から削除され、残りの配列が返る。
+第2引数が指定されていない時は1番最後の値だけが返る。
+
+<script>
+var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var re = _.last( array );
+console.log(re);
+
+var re = _.last( array, 5 );
+console.log(re);
+
+</script>
+</body>
+</html>
