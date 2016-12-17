@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>removeClassメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+<h1 class="h1-tag">removeClassメソッド</h1>
+
+<script>
+$(function(){
+  // 指定したclass名を削除します。
+  // $("h1").removeClass("h1-tag");
+
+  // 指定した関数の戻り値となるclass名を削除します。
+  $("h1").removeClass( function(){
+    // return $(this).attr("class");
+    var className = $(this).attr("class");
+    console.log(className);
+  });
+});
+
+</script>
+
+</body>
+</html>
