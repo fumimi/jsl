@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>unionメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+<h1>unionメソッド</h1>
+<p>複数の引数「配列」を一つにまとめ、重複した値を削除し各値が重複のない配列として返される。</p>
+
+<script>
+var array1 = [1, 2, 3];
+var array2 = [101, 2, 1, 10];
+var array3 = [2, 1];
+var re = _.union( array1, array2, array3 );
+console.log(re);
+
+var array1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 4, 5, 7, 9, false, undefined, undefined];
+var array2 = [101, 2, 1, 10];
+var array3 = [2, 1];
+var array4 = [false, 1000];
+
+var re = _.union( array1, array2, array3, array4);
+console.log(re);
+
+</script>
+</body>
+</html>
