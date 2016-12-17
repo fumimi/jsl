@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>コンストラクタで初期値を設定する - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>コンストラクタで初期値を設定する</h1>
+
+<script>
+var MyCollection = Backbone.Collection.extend();
+
+var myCollection = new MyCollection([
+    {name: 'Hoge'},
+    {name: 'Fuga'}
+]);
+
+myCollection.each(function(e, i) {
+    console.log(e instanceof Backbone.Model);
+    console.log(i + ' : ' + e.get('name'));
+});
+
+</script>
+</body>
+</html>
