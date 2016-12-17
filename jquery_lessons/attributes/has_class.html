@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>hasClassメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+<h1 class="h1-tag">hasClassメソッド</h1>
+<div id="mydiv" class="foo bar"></div>
+
+<script>
+$(function(){
+  // 指定したclass名が割り当てられているかどうかを判定します。
+
+  var foo = $("#mydiv").hasClass("foo");
+  var bar = $("#mydiv").hasClass("bar");
+  var quux = $("#mydiv").hasClass("quux");
+  console.log(foo);
+  console.log(bar);
+  console.log(quux);
+});
+
+</script>
+
+</body>
+</html>
