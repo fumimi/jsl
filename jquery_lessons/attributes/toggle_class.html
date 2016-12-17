@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>toggleClassメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+<h1 class="h1-tag">toggleClassメソッド</h1>
+<div class="hoge">Some text.</div>
+
+<script>
+$(function(){
+  // 指定したclassの追加・削除の切り替えを行います。空白区切りで複数指定可能です。
+  // $("div.hoge").toggleClass("hogehoge");
+  // $("div.hoge").toggleClass("hogehoge");
+
+  $("div.hoge").toggleClass("hogehoge", true); // 追加
+  $("div.hoge").toggleClass("hogehoge", false); // 削除
+
+});
+
+</script>
+
+</body>
+</html>
