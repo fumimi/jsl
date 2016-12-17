@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>コンストラクタを定義する - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>コンストラクタを定義する</h1>
+
+<script>
+var MyRouter = Backbone.Router.extend({
+    constructor: function() {
+        console.log('constructor');
+    }
+});
+
+var myRouter = new MyRouter();
+
+</script>
+</body>
+</html>
