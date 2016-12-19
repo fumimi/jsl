@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>インスタンスのコピーを作成する - Model - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>インスタンスのコピーを作成する</h1>
+
+<script>
+var MyModel = Backbone.Model.extend();
+var original = new MyModel({
+  value: {
+    name: "hoge"
+  }
+});
+
+var copy = original.clone();
+console.log(copy.get("value").name);
+
+copy.get("value").name = "xxx";
+console.log(original.get("value").name);
+
+</script>
+</body>
+</html>
