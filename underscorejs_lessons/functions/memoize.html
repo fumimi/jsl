@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>memoizeメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+<h1>memoizeメソッド</h1>
+<p>一度計算した値をキャッシュする機能を引数（関数）に付け加える関数。</p>
+
+<script>
+var obj = [
+  {
+    title: "t1",
+    year: 1994,
+    author: "a1"
+  },
+  {
+    title: "t2",
+    year: 1995,
+    author: "a2"
+  },
+  {
+    title: "t3",
+    year: 1996,
+    author: "a3"
+  }
+];
+
+var pre = { author: "a1" };
+var func = function( key ){
+  return _.where( obj, key );
+}
+
+var memo = _.memoize( func );
+console.log(memo);
+
+</script>
+</body>
+</html>
