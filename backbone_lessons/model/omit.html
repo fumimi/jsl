@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>指定した名前以外のプロパティだけを抽出する - Model - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>指定した名前以外のプロパティだけを抽出する</h1>
+
+<script>
+var MyModel = Backbone.Model.extend({
+  defaults: {
+    value: "Value",
+    name: "Name"
+  }
+});
+var myModel = new MyModel();
+console.log(myModel.omit("value"));
+
+</script>
+</body>
+</html>
