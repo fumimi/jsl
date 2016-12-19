@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>プロパティが指定した値の要素のうち、先頭の要素だけを取得する - Collection - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>プロパティが指定した値の要素のうち、先頭の要素だけを取得する</h1>
+
+<script>
+var MyCollection = Backbone.Collection.extend();
+var myCollection = new MyCollection([
+  { name: "hoge", age: 22 },
+  { name: "foo", age: 23 },
+  { name: "piyo", age: 24 }
+]);
+var element = myCollection.findWhere({ age: 22 });
+console.log(element.get("name"));
+
+</script>
+</body>
+</html>
