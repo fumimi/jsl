@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>delayメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+<h1>delayメソッド</h1>
+<p>第2引数の時間後（単位はミリ秒）、第1引数の関数が実行される。<br>
+  第3引数以降の引数は第1引数の関数に渡される。</p>
+
+<script>
+function logged( txt ){
+  var text = _.now();
+  console.log( "re now : " + txt + " : " + text );
+}
+var re = _.delay( logged, 1000, "test");
+console.log(re);
+
+</script>
+</body>
+</html>
