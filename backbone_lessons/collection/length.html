@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>要素の数（サイズ）を取得する - Collection - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>要素の数（サイズ）を取得する</h1>
+
+<script>
+var MyCollection = Backbone.Collection.extend();
+var myCollection = new MyCollection([
+  { name: "hoge" },
+  { name: "hogehoge" }
+]);
+console.log(myCollection.length);
+
+</script>
+</body>
+</html>
