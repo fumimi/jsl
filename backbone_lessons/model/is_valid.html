@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>バリデーションメソッドを定義する - Model - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>バリデーションメソッドを定義する</h1>
+
+<script>
+var MyModel = Backbone.Model.extend({
+  validate: function(attrs){
+    if(!attrs.value){
+      return "vaule is empty";
+    }
+  }
+});
+// var myModel = new MyModel({ value: "xxx"});
+// console.log(myModel.isValid());
+
+var myModel = new MyModel();
+myModel.isValid();
+console.log(myModel.validationError);
+
+</script>
+</body>
+</html>
