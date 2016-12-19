@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>objectメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+<h1>objectメソッド</h1>
+<p>2つの引数（配列）をとり、それぞれをkey値とval値に設定したObjectを返す。</p>
+
+<script>
+var array1 = ["moe", "larry", "curly"];
+var array2 = [30, 40, 50];
+
+var re = _.object( array1, array2 );
+console.log(re);
+
+var array3 = [["moe", 30], ["larry", 40], ["curly", 50]];
+var re = _.object( array3 );
+console.log(re);
+
+</script>
+</body>
+</html>
