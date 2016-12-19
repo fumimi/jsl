@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>全ての要素を削除する - Collection - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>全ての要素を削除する</h1>
+
+<script>
+var MyCollection = Backbone.Collection.extend();
+var myCollection = new MyCollection(["hoge", "foo", "piyo"]);
+console.log(myCollection.length);
+myCollection.reset();
+console.log(myCollection.length);
+
+</script>
+</body>
+</html>
