@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>各要素から、指定したプロパティだけを抽出したリストを取得する - Collection - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>各要素から、指定したプロパティだけを抽出したリストを取得する</h1>
+
+<script>
+var MyCollection = Backbone.Collection.extend();
+var myCollection = new MyCollection([
+  { name: "hoge" },
+  { name: "hogehoge" },
+  { name: "foo" }
+]);
+var names = myCollection.pluck("name");
+console.log(names);
+
+</script>
+</body>
+</html>
