@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>プロパティのコピーを取得する - Model - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>プロパティのコピーを取得する</h1>
+
+<script>
+var MyModel = Backbone.Model.extend({
+  defaults: {
+    value: "VALUE"
+  }
+});
+
+var myModel = new MyModel();
+var properties = myModel.toJSON();
+
+console.log(properties.value);
+
+properties.value = "changed";
+console.log(properties.value);
+
+console.log(myModel.get("value"));
+
+</script>
+</body>
+</html>
