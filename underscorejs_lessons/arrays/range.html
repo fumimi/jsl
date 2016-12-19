@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>rangeメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+<h1>rangeメソッド</h1>
+<p>第1引数から第2引数 - 1までの数字の入った配列を返す関数。<br>
+引数が1つの時は0から引数 - 1までの数字の入った配列を返す。</p>
+
+<script>
+var re = _.range(5);
+console.log(re);
+
+var re = _.range(4, 10);
+console.log(re);
+
+var re = _.range(0, 30, 5);
+console.log(re);
+
+var re = _.range(0, -10, -1);
+console.log(re);
+
+var re = _.range(0);
+console.log(re);
+
+</script>
+</body>
+</html>
