@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ソートする - Collection - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>ソートする</h1>
+
+<script>
+var MyCollection = Backbone.Collection.extend({
+  comparator: "name"
+});
+var myCollection = new MyCollection([
+  { name: "ccc" },
+  { name: "aaa" },
+  { name: "bbb" }
+]);
+myCollection.sort();
+myCollection.each( function(e, i){
+  console.log(i + " : " + e.get("name"));
+});
+
+</script>
+</body>
+</html>
