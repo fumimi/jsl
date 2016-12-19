@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>bindAllメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+<h1>bindAllメソッド</h1>
+<p>第2引数以降で指定したメソッド名（第1引数のkeyにある名前）を第1引数「Object」をthisとしてBindする関数。</p>
+
+<script>
+var buttonView = {
+  label: "underscore",
+  onClick: function(){ console.log("clicked:" + this.label); },
+  onHover: function(){ console.log("hovering:" + this.label); }
+};
+var re = _.bindAll( buttonView, "onClick", "onHover");
+
+re.onClick();
+re.onHover();
+
+</script>
+</body>
+</html>

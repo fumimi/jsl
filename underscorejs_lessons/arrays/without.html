@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>withoutメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+<h1>withoutメソッド</h1>
+<p>第1引数「配列」から第2引数の値を配列から省いた配列を返す。</p>
+
+<script>
+var array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var re = _.without( array, 0, 1, 10);
+console.log(re);
+
+var re = _.without( array, 2, 5, 50, 45, 30, -5);
+console.log(re);
+
+</script>
+</body>
+</html>

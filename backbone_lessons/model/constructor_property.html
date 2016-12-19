@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>コンストラクタの引数でプロパティを設定する - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>コンストラクタの引数でプロパティを設定する</h1>
+
+<script>
+var MyModel = Backbone.Model.extend();
+
+var myModel = new MyModel({value: 'VALUE'});
+
+console.log(myModel.get('value'));
+
+</script>
+</body>
+</html>

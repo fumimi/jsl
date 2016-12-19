@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>プロパティを設定・取得する - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>プロパティを設定・取得する</h1>
+
+<script>
+var MyModel = Backbone.Model.extend();
+
+var myModel = new MyModel();
+
+myModel.set('value', 'field value');
+console.log(myModel.get('value'));
+
+</script>
+</body>
+</html>

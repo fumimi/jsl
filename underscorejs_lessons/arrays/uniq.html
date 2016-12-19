@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>uniqメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+<h1>uniqメソッド</h1>
+<p>引数「配列」の各値の中で同じ値があった場合、<br>
+  1つだけにされ（他のindex値の値は削除）各値が重複のない配列として返される。</p>
+
+<script>
+var array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 4, 5, 7, 9, false, undefined, undefined];
+var re = _.uniq( array );
+console.log(re);
+
+</script>
+</body>
+</html>

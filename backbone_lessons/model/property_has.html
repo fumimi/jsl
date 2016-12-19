@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>プロパティを持つかどうかを確認する - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>プロパティを持つかどうかを確認する</h1>
+
+<script>
+var MyModel = Backbone.Model.extend({
+    defaults: {
+        value: 'VALUE'
+    },
+    method: function() {}
+});
+
+var myModel = new MyModel();
+
+console.log(myModel.has('value'));
+console.log(myModel.has('xxxxx'));
+console.log(myModel.has('method'));
+
+</script>
+</body>
+</html>

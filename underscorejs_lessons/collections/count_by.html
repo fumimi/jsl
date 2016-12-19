@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>countByメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+第1引数「配列」の各値を
+第2引数「関数」でグループ分けしたObjectを返す。
+Objectの中身は指定したkeyとそのグループの数。
+
+<script>
+var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var func = function( val ){
+  return val % 2 == 0 ? "even": "odd";
+}
+var re = _.countBy( array, func );
+console.log(re);
+
+</script>
+</body>
+</html>

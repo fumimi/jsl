@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>unzipメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+<h1>unzipメソッド</h1>
+<p>引数である各配列のindex値の値をまとめた配列を作る。返される配列のlengthは引数の中で1番長いlengthを持つ配列と同じ長さになる。</p>
+
+<script>
+var array1 = ["moe", "larry", "curly"];
+var array2 = [30, 40, 50, 60];
+var array3 = [true, false, false, true, false];
+
+var re = _.zip( array1, array2, array3 );
+var un_re = _.unzip(re);
+console.log(un_re);
+
+</script>
+</body>
+</html>

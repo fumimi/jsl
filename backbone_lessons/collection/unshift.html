@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>先頭に要素を追加する - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>先頭に要素を追加する</h1>
+
+<script>
+var MyCollection = Backbone.Collection.extend();
+
+var myCollection = new MyCollection([
+    {name: 'Hoge'},
+    {name: 'Fuga'}
+]);
+
+myCollection.unshift({name: 'Piyo'});
+
+myCollection.each(function(e, i) {
+    console.log(i + ' : ' + e.get('name'));
+});
+
+</script>
+</body>
+</html>

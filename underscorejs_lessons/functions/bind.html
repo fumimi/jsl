@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>bindメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+<h1>bindメソッド</h1>
+<p>第2引数をthisとした第1引数「関数」を返す。</p>
+
+<script>
+var func = function(greeting){
+  return greeting + "：" + this.name;
+};
+var obj = {name: "moe"};
+var txt = "hi";
+var re = _.bind( func, obj );
+re(txt);
+
+console.log( re(txt) );
+
+</script>
+</body>
+</html>

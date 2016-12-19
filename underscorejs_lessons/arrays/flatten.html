@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>flattenメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+<h1>flattenメソッド</h1>
+<p>第1引数「配列」のみの時は、入れ子の配列を単純な配列（入れ子なし）にしてくれる。<br>
+  第2引数で「true」が指定されている時は、一番浅い配列だけを解消する。</p>
+
+<script>
+var array = [1, [2], [3, [[4]]]];
+var re = _.flatten( array );
+console.log(re);
+
+var re = _.flatten( array );
+console.log( re, true );
+
+</script>
+</body>
+</html>

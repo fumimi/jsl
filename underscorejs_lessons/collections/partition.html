@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>partitionメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+第1引数「配列（Object）」の各値を第2引数の関数の条件によって振り分ける。
+
+<script>
+var array = [1, 2 ,3, 4, 5, 6, 7, 8, 9, 10];
+var func = function( val ){
+  return val % 2 == 0;
+};
+var re = _.partition( array, func );
+console.log( re );
+
+var obj = [
+  {
+    title: "t1",
+    year: 1994,
+    author: "a1"
+  },
+  {
+    title: "t2",
+    year: 1995,
+    author: "a2"
+  },
+  {
+    title: "t3",
+    year: 1996,
+    author: "a3"
+  }
+];
+
+var re = _.partition( obj, func );
+console.log(re);
+
+</script>
+</body>
+</html>
