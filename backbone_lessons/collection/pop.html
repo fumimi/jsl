@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>最後の要素を抜き取る - Collection - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>最後の要素を抜き取る</h1>
+
+<script>
+var MyCollection = Backbone.Collection.extend();
+var myCollection = new MyCollection([
+  { name: "hoge" },
+  { name: "hogehoge" }
+]);
+var topElement = myCollection.pop();
+console.log(topElement.get("name"));
+myCollection.each( function(e, i){
+  console.log(i + " : " + e.get("name"));
+});
+
+</script>
+</body>
+</html>
