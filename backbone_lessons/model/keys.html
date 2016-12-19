@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>全てのプロパティの名前をリストで取得する - Model - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>全てのプロパティの名前をリストで取得する</h1>
+
+<script>
+var MyModel = Backbone.Model.extend({
+  defaults: {
+    value: "",
+    name: ""
+  }
+});
+var myModel = new MyModel();
+console.log(myModel.keys());
+
+</script>
+</body>
+</html>
