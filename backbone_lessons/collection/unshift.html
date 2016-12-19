@@ -12,16 +12,14 @@
 
 <script>
 var MyCollection = Backbone.Collection.extend();
-
 var myCollection = new MyCollection([
-    {name: 'Hoge'},
-    {name: 'Fuga'}
+  { name: "hoge" },
+  { name: "hogehoge"}
 ]);
 
-myCollection.unshift({name: 'Piyo'});
-
-myCollection.each(function(e, i) {
-    console.log(i + ' : ' + e.get('name'));
+myCollection.unshift({ name: "Piyo" });
+myCollection.each( function(e, i){
+  console.log(i + " : " + e.get("name"));
 });
 
 </script>
