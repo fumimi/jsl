@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>throttleメソッド</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</head>
+<body>
+<h1>throttleメソッド</h1>
+<p>第1引数の関数を設定して、1回目は即時発動して2回目以降は、<br>
+  第2引数の時間後発動（単位はミリ秒）。<br>
+  その間の関数発動は一番最後に受け付けた関数のみ発動する関数を返す。</p>
+
+<script>
+function logged( txt ){
+  var text = _.now();
+  console.log( "re now : " + txt + " : " + text );
+}
+var re = _.throttle( logged, 5000 );
+re("0");
+re("1");
+re("2");
+re("3");
+re("4");
+re("5");
+
+</script>
+</body>
+</html>
