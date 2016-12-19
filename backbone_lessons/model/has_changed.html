@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>プロパティが変更されたかどうかを確認する - Model - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>プロパティが変更されたかどうかを確認する</h1>
+
+<script>
+var MyModel = Backbone.Model.extend();
+var myModel = new MyModel({
+  value: "VALUE"
+});
+console.log(myModel.hasChanged("value"));
+myModel.set("value", "change");
+console.log(myModel.hasChanged("value"));
+
+</script>
+</body>
+</html>
