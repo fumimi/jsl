@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>値が書き変えられたプロパティを取得する - Model - Backbone.js</title>
+<script src="../js/underscore.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/backbone.js"></script>
+</head>
+<body>
+<h1>値が書き変えられたプロパティを取得する</h1>
+
+<script>
+var MyModel = Backbone.Model.extend();
+var myModel = new MyModel({
+  value: "VALUE"
+});
+myModel.set("value", "change");
+console.dir(myModel.changed);
+
+</script>
+</body>
+</html>
