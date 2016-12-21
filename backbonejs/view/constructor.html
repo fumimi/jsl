@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>コンストラクタを定義する - Backbone.js</title>
+<title>コンストラクタを定義する - View - Backbone.js</title>
 <script src="../js/underscore.js"></script>
 <script src="../js/jquery.js"></script>
 <script src="../js/backbone.js"></script>
@@ -12,9 +12,9 @@
 
 <script>
 var MyView = Backbone.View.extend({
-    constructor: function() {
-        console.log('constructor');
-    }
+  constructor: function(){
+    console.log("constructor");
+  }
 });
 
 var myView = new MyView();
